@@ -3,12 +3,12 @@ describe('LearnJS', function() {
         learnjs.showView('#problem-1');
         expect($('.view-container .problem-view').length).toEqual(1);
     });
-
+    
     it('shows the landing page view when there is no hash.', function() {
-        learnjs.showView();
+        learnjs.showView('');
         expect($('.view-container .landing-view').length).toEqual(1);
     });
-
+    
     it('passes the hash biew parameter to the view function', function() {
         spyOn(learnjs, 'problemView');
         learnjs.showView('#problem-42');
