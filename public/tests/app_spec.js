@@ -5,6 +5,6 @@ describe('LearnJS', function() {
     });
     it('shows the landing page view when there is no hash.', function() {
         learnjs.showView();
-        expect($('.view-container .landing-view').length).toEqua(1);
+        expect($('.view-container .landing-view').length).toEqual(1);
     });
 });
