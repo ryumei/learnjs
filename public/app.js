@@ -1,7 +1,8 @@
 'use strict';
 var learnjs = {};
 
-leanjs.problems = [
+//
+learnjs.problems = [
     {
         description: "What is truth?",
         code: "function problem() { return __; }"
@@ -11,10 +12,13 @@ leanjs.problems = [
         code: "function problem() { return 42 === 6 * __; }"
     }    
 ];
+//
 
-learnjs.problemView = function(problemNumber) {
+learnjs.problemView = function(data) {
+    var problemNumber = parseInt(data, 10);
     var view = $('.templates .problem-view').clone();
-    view.find('.title').text('Problem #' + problemNumber + ' Coming soon!');
+    view.find('.title').text('Problem #' + problemNumber);
+    learnjs.applyObject(learnjs.problems[problemNumber], view);
     return view;
 }
 
@@ -34,4 +38,10 @@ learnjs.appOnReady = function() {
         learnjs.showView(window.location.hash);
     };
     learnjs.showView(window.location.hash);
+}
+
+learnjs.applyObject = function(obj, elem) {
+    for (var key in obj) {
+        elem.find('[data-name="' + key + '"]').text(obj[key]);
+    }
 }
