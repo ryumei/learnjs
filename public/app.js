@@ -18,7 +18,7 @@ learnjs.problemView = function(data) {
     var problemNumber = parseInt(data, 10);
     var view = $('.templates .problem-view').clone();
     view.find('.title').text('Problem #' + problemNumber);
-    learnjs.applyObject(learnjs.problems[problemNumber], view);
+    learnjs.applyObject(learnjs.problems[problemNumber - 1], view);
     return view;
 }
 
