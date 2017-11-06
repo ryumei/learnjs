@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+ ! Excerpted from "Serverless Single Page Apps",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material,
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose.
+ ! Visit http://www.pragmaticprogrammer.com/titles/brapps for more book information.
+-->
 <html>
   <head>
     <meta charset='utf-8'>
@@ -7,13 +15,12 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'>
     <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-      ':35729/livereload.js?snipver=2"></' + 'script>')</script><!-- livereloadx -->
     <script src='/vendor.js'></script>
     <script src='/app.js'></script>
     <style type="text/css" media="all">
       body { margin-top: 30px; }
       .templates { display: none; }
+    </style>
     </style>
   </head>
   <body>
@@ -26,7 +33,7 @@
               <a href='#problem-1' class='button button-primary'>Start Now!</a>
             </div>
             <div class='one-half column'>
-              <img src='/images/HeroImage.jpg' />
+              <img src='/images/HeroImage.jpg'/>
             </div>
           </div>
         </div>
@@ -36,6 +43,13 @@
           <h3 class='title'></h3>
           <p data-name='description'></p>
           <pre><code data-name='code'></code></pre>
+          <form>
+            <textarea class='u-full-width answer'></textarea>
+            <div>
+              <button class='button-primary check-btn'>Check Answer</button>
+              <p class='result'></p>
+            </div>
+          </form>
         </div>
       </div>
     </div>
