@@ -80,7 +80,8 @@ learnjs.problemView = function(data) {
 
 learnjs.showView = function(hash) {
   var routes = {
-    '#problem': learnjs.problemView
+    '#problem': learnjs.problemView,
+    '': learnjs.landingView
   };
   var hashParts = hash.split('-');
   var viewFn = routes[hashParts[0]];
@@ -94,4 +95,8 @@ learnjs.appOnReady = function() {
     learnjs.showView(window.location.hash);
   };
   learnjs.showView(window.location.hash);
+}
+
+learnjs.landingView = function() {
+    return learnjs.template('landing-view');
 }
