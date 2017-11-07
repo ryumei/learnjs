@@ -18,7 +18,7 @@
     <script src='/vendor.js'></script>
     <script src='/app.js'></script>
     <style type="text/css" media="all">
-      body { margin-top: 30px; }
+      body { margin-top: 60px; }
       .templates { display: none; }
       .fixed-width-text { font-family: "Consolas","Courier New",monospace }
       .no-select {
@@ -29,9 +29,7 @@
       }
       .nav-container {
         padding-left: 40px;
-        height: 25px;
         background: #666;
-        width: 100%;
       }
       .nav-container a { color: white; }
       .fixed-top {
@@ -39,20 +37,30 @@
         top: 0px;
         z-index: 1024;
       }
+      .inline-list {
+        margin-bottom: 0px; /* Skeleton reset */
+      }
       .inline-list li {
         display: inline;
         margin: 0 20px 0 0;
       }
       .hover-links a { text-decoration: none; }
       .hover-links a:hover { text-decoration: underline; }
+      .navbar-padding {
+        padding-top: 7px;
+        display: inline-block;
+      }
+      .text-lg {
+        font-size: 32px;
+      }
     </style>
     </style>
   </head>
   <body>
     <div class='markup'>
-      <div class='nav-container no-select fixed-top'>
-        <ul class='inline-list hover-links'>
-          <li><a href="#">LearnJS</a></li>
+      <div class='nav-container no-select fixed-top u-full-width'>
+        <ul class='inline-list hover-links nav-list six columns'>
+          <li><a class='text-lg' href="#">LearnJS</a></li>
           <li><a href="#problem-1">Start</a></li>
         </ul>
       </div>
@@ -84,6 +92,10 @@
             </div>
           </form>
         </div>
+
+        <li class='skip-btn'>
+          <a>Skip This Problem</a>
+        </li>
 
         <div class='correct-flash'>
           <span>Correct!</span> <a>Next Problem</a>
