@@ -119,3 +119,7 @@ learnjs.appOnReady = function() {
 learnjs.landingView = function() {
   return learnjs.template('landing-view');
 }
+
+function googleSignIn() {
+  console.log(arguments);
+}
