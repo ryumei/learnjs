@@ -115,3 +115,7 @@ learnjs.appOnReady = function() {
   };
   learnjs.showView(window.location.hash);
 }
+
+learnjs.landingView = function() {
+  return learnjs.template('landing-view');
+}
