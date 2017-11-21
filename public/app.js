@@ -9,7 +9,7 @@
 "use strict";
 
 var learnjs = {
-  poolId: 'us-east-1:71958f90-67bf-4571-aa17-6e4c1dfcb67d'
+  poolId: 'ap-northeast-1:97ab42d2-78ca-4939-8094-8b7eb69d2695'
 };
 
 learnjs.identity = new $.Deferred();
@@ -228,7 +228,7 @@ learnjs.awsRefresh = function() {
 function googleSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
   AWS.config.update({
-    region: 'us-east-1',
+    region: 'ap-northeast-1',
     credentials: new AWS.CognitoIdentityCredentials({
       IdentityPoolId: learnjs.poolId,
       Logins: {
