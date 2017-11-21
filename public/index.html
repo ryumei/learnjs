@@ -10,8 +10,6 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta name="google-signin-client_id" content="785068009620-f21durqq7iti1rra4u897r1aigcpchic.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>Learn JS!</title>
     <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css'>
@@ -52,14 +50,18 @@
         padding-top: 7px;
         display: inline-block;
       }
+      .navbar-padding-lg {
+        padding-top: 12px;
+        display: inline-block;
+      }
       .text-lg {
         font-size: 32px;
       }
-      .navbar-padding {
-        padding-top: 7px;
-        display: inline-block;
-      }
     </style>
+    </style>
+    <meta name="google-signin-client_id"
+          content="351607165455-uesp1702cesp44vbn539m7rm6gg5ov3h.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <div class='markup'>
@@ -77,6 +79,9 @@
       <div class='view-container container'>
       </div>
       <div class='templates'>
+        <div class='profile-link navbar-padding-lg'>
+          <a href="#profile"></a>
+        </div>
         <div class='landing-view'>
         <!-- Markup Continues... -->
           <div class='row'>
@@ -89,6 +94,12 @@
             </div>
           </div>
         </div>
+
+        <div class='profile-view'>
+          <h3>Your Profile</h3>
+          <div class='email'></div>
+        </div>
+
         <div class='problem-view'>
           <h3 class='title'></h3>
           <p data-name='description'></p>
@@ -100,13 +111,6 @@
               <p class='result'></p>
             </div>
           </form>
-        </div>
-        <div class='profile-view'>
-          <h3>Your Profile</h3>
-          <div class='email'></div>
-        </div>
-        <div class='profile-link navbar-padding-lg'>
-          <a href='#profile'></a>
         </div>
 
         <li class='skip-btn'>
